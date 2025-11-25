@@ -1,0 +1,93 @@
+body {
+    background-color: black;
+    color: white;
+    height: 100vh;
+    width: 100vw;
+    margin: 0rem;
+    overflow: hidden;
+    cursor: none;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient();
+    
+}
+.header {
+    background-color: rgb(1, 11, 8);
+    padding: 5px 10px;
+   box-shadow: 8px 4px 8px rgba(255, 254, 254, 0.3);
+}
+
+.header-right {
+    float: right;
+}
+
+.header a {
+    color:aqua;
+    text-decoration: none;
+    padding: 12px;
+}
+
+#image-track {
+    display: flex;
+    gap: 4vmin;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(0%, -50%); 
+    user-select: none; /* Prevent image highlighting */
+    cursor: none;
+}
+  
+#image-track > .image {
+    width: 40vmin;
+    height: 56vmin;
+    object-fit: cover;
+    object-position: 100% center;
+    transition: transform 0.4s ease;
+}
+
+#image-track > .image:hover {
+    transform: scale(1.2);  /* Expands the image by 10% on hover */
+}
+
+.circle {
+    height:14px;
+    width:14px;
+    border-radius:14px;
+    background-color: white;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    z-index: 99999999;
+}
+
+a {
+    cursor: none !important;
+}
+
+.circle.hovered {
+    background-color: red; 
+}
+.thanks {
+    padding: 5px;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;    
+}
+
+.thanks:hover {
+    animation: colorChange 5s infinite;
+}
+
+@keyframes colorChange {
+    0% { color: #FF0000; }
+    12.5% { color: #FF7F00; }
+    25% { color: #ee00ff; }
+    37.5% { color: #7FFF00; }
+    50% { color: #00FF00; }
+    62.5% { color: #00FFFF; }
+    75% { color: #0000FF; }
+    87.5% { color: #8B00FF; }
+    100% { color: #FF0000; }
+}

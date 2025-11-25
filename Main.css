@@ -1,0 +1,378 @@
+body {
+    color: white;
+    height: 100vh;
+    width: 100vw;
+    margin: 0rem;
+    overflow: hidden;
+    cursor: none;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #ffffff, #1887f6);
+    
+}
+/* General navbar styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+  }
+  
+  /* Left and right navigation elements */
+  .nav-left, .nav-right {
+    display: flex;
+  }
+  
+  .nav-left a, .nav-right a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+  }
+  
+  .nav-left a:hover, .nav-right a:hover {
+    background-color: #555;
+    border-radius: 5px;
+  }
+  
+  /* Search container */
+  .search-container {
+    flex: 1; /* This allows the search bar container to take up available space */
+    text-align: center;
+  }
+  
+  /* Styling the search bar */
+  #search-bar {
+    padding: 8px 15px;
+    font-size: 16px;
+    width: 60%;  /* You can adjust this width */
+    max-width: 400px; /* Prevents the search bar from stretching too wide */
+    border: none;
+    border-radius: 25px;
+    outline: none; /* Removes the default outline when clicked */
+  }
+  
+  /* Optional: Adding a border and focus effect for better UX */
+  #search-bar:focus {
+    border: 2px solid #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  }
+  
+
+  #image-track {
+    display: flex;
+    gap: 4vmin;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(0%, -50%);
+    user-select: none; /* Prevent image highlighting */
+    cursor: none;
+    -webkit-overflow-scrolling: touch;
+}
+
+#image-track > .image {
+    width: 40vmin;
+    height: 56vmin;
+    object-fit: cover;
+    object-position: 100% center;
+    transition: transform 0.4s ease;
+}
+
+#image-track > .image:hover {
+    transform: scale(1.2); /* Expands the image by 10% on hover */
+}
+
+/* Hidden song styling (same as visible images) */
+.hidden-song {
+    display: flex;
+    gap: 4vmin;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(0%, -50%);
+    user-select: none; /* Prevent image highlighting */
+    cursor: none;
+    -webkit-overflow-scrolling: touch;
+}
+
+.hidden-song > .image {
+    width: 40vmin;
+    height: 56vmin;
+    object-fit: cover;
+    object-position: 100% center;
+    transition: transform 0.4s ease;
+}
+
+.hidden-song > .image:hover {
+    transform: scale(1.2); /* Expands the image by 10% on hover */
+}
+
+
+.circle {
+    height:14px;
+    width:14px;
+    border-radius:14px;
+    background-color: white;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    z-index: 99999999;
+}
+
+a {
+    cursor: none !important;
+}
+
+.circle.hovered {
+    background-color: red; 
+}
+
+.music-player {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to right, #000000, #434343);
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.4);
+    z-index: 9999;
+    gap: 15px;
+    font-family: 'Lavishly Yours'
+}
+
+
+.album-art {
+    height: 48px;
+    width: 48px;
+    border-radius: 5px;
+    object-fit: cover;
+    background-color: #222;
+}
+
+.track-info {
+    display: flex;
+    flex-direction: column;
+    max-width: 120px;
+    overflow: hidden;
+}
+
+.track-title {
+    font-weight: bold;
+    font-size: 24px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.track-artist {
+    font-size: 12px;
+    color: #ccc;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.play-btn {
+    font-size: 20px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: none;
+}
+
+.play-btn:hover {
+    color: #1db954;
+}
+
+.progress-bar {
+    width: 720px;
+    height: 5px;
+    border-radius: 10px;
+    appearance: none;
+    background: #555;
+    outline: none;
+    cursor: none;
+}
+
+.progress-bar::-webkit-slider-thumb {
+    appearance: none;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #1db954;
+    cursor: none;
+}
+
+.volume-bar {
+    width: 200px;
+    height: 5px;
+    appearance: none;
+    background: #777;
+    border-radius: 5px;
+    cursor: none;
+}
+
+.volume-bar::-webkit-slider-thumb {
+    appearance: none;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: white;
+    cursor: none;
+}
+
+.music-player audio {
+    display: none;
+    cursor: none;
+}
+
+.music-player button,
+.music-player .progress-bar,
+.music-player .volume input {
+    cursor: none;
+}
+
+#playPauseBtn {
+    background-color: #ffffff;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 30px;
+    cursor: none;
+    margin-top: 20px;
+    transition: background 0.3s ease;
+}
+
+#playPauseBtn:hover {
+    background-color: #ffffff;
+}
+
+@media (max-width: 768px) {
+    #image-track {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        width: 100vw;
+        height: auto;
+        position: static;
+        transform: none;
+    }
+
+    #image-track>.image {
+        width: 70vw;
+        height: auto;
+    }
+}
+
+.progress-bar:focus,
+.volume-bar:focus {
+    outline: 2px solid #1db954;
+}
+
+.background-gradient {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    background: linear-gradient(to bottom right, #111, #222);
+    background-size: 200%;
+    transition: background 10s ease-in-out;
+}
+
+.prev-btn,
+.next-btn {
+    font-size: 20px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: none;
+    padding: 0 10px;
+}
+
+.prev-btn:hover,
+.next-btn:hover {
+    color: #1db954;
+}
+
+.image.active-song {
+    border: 3px solid #1db954;
+    transform: scale(1.25);
+}
+/* General navbar styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+  }
+  
+  /* Left and right navigation elements */
+  .nav-left, .nav-right {
+    display: flex;
+  }
+  
+  .nav-left a, .nav-right a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+  }
+  
+  .nav-left a:hover, .nav-right a:hover {
+    background-color: #555;
+    border-radius: 5px;
+  }
+  
+  /* Search container */
+  .search-container {
+    flex: 1; /* This allows the search bar container to take up available space */
+    text-align: center;
+  }
+  
+  /* Styling the search bar */
+  #search-bar {
+    padding: 8px 15px;
+    font-size: 16px;
+    width: 60%;  /* You can adjust this width */
+    max-width: 400px; /* Prevents the search bar from stretching too wide */
+    border: none;
+    border-radius: 25px;
+    outline: none; /* Removes the default outline when clicked */
+  }
+  
+  /* Optional: Adding a border and focus effect for better UX */
+  #search-bar:focus {
+    border: 2px solid #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  }
+
+.hidden-song {
+    display: none; 
+}
+.search-results {
+    display: none;
+    margin-top: 20px;
+    padding: 10px;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .search-results img {
+    width: 150px;
+    height: 150px;
+    cursor: pointer;
+    border-radius: 12px;
+    transition: transform 0.2s ease;
+  }
+  
+  .search-results img:hover {
+    transform: scale(1.05);
+  }
+  

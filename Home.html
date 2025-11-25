@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Home Page
+        </title>
+        <link rel="stylesheet" href="Home.css">
+        <link href='https://fonts.googleapis.com/css?family=Lavishly Yours' rel='stylesheet'>
+        <style>
+            body {
+                font-family: 'Lavishly Yours';font-size:25px;
+            }
+            </style>
+
+    </head>
+    <body>
+        <div class="header">
+            <a href="Main.html" class="logo">Don't Li$ten</a>
+            <div class="header-right">
+                <a href="about.html">About</a>
+            </div>
+          </div>   
+           
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+
+          <div id="menu">
+            <div id="menu-items">
+              <div class="menu-item"> <a href="Home.html">Home</a></div>
+              <div class="menu-item"> <a href="Main.html">Main Content</a></div>
+              <div class="menu-item"><a href="Map.html">WorCon</a></div>
+              <div class="menu-item"><a href="about.html">About</a></div>
+              </div>
+            <div id="menu-background-pattern"></div>
+            <div id="menu-background-image"></div>
+          </div>
+          
+          
+                    
+          <script>
+            const menu = document.getElementById("menu");
+
+            Array.from(document.getElementsByClassName("menu-item"))
+            .forEach((item, index) => {
+                item.onmouseover = () => {
+                menu.dataset.activeIndex = index;
+                }
+            });
+            document.addEventListener("DOMContentLoaded", () => {
+                const coords = { x: 0, y: 0 };
+                    const circles = document.querySelectorAll(".circle");
+
+                    circles.forEach(circle => {
+                    circle.x = 0;
+                    circle.y = 0;
+                    });
+
+                    window.addEventListener("mousemove", function (e) {
+                    coords.x = e.clientX;
+                    coords.y = e.clientY;
+                    });
+
+                    function circleAnime() {
+                    let x = coords.x;
+                    let y = coords.y;
+
+                    circles.forEach((circle, index) => {
+                        circle.style.left = x + "px";
+                        circle.style.top = y  + "px";
+
+                        circle.style.scale = (circles.length - index) / circles.length;
+
+                        circle.x = x;
+                        circle.y = y;
+
+                        const nextCircle = circles[index + 1] || circles[0];
+                        x += (nextCircle.x - x) * 0.3;
+                        y += (nextCircle.y - y) * 0.3;
+                    });
+
+                    requestAnimationFrame(circleAnime);
+                    }
+
+                    circleAnime();
+
+                    const links = document.querySelectorAll("a");
+                    /*hover part*/
+                    links.forEach(link => {
+                    link.addEventListener("mouseenter", () => {
+                        circles.forEach(circle => circle.classList.add("hovered"));
+                    });
+
+                    link.addEventListener("mouseleave", () => {
+                        circles.forEach(circle => circle.classList.remove("hovered"));
+                    });
+                    });
+                });
+              </script>
+              
+    </body>
+</html>

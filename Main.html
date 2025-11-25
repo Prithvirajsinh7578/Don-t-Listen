@@ -1,0 +1,1055 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.2/color-thief.umd.js"></script>
+
+  <title>
+    Music
+  </title>
+  <link rel="stylesheet" href="Main.css">
+  <link href='https://fonts.googleapis.com/css?family=Lavishly Yours' rel='stylesheet'>
+  <style>
+    body {
+      font-family: 'Lavishly Yours';
+      font-size: 25px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="background-gradient"></div>
+
+  <div class="navbar">
+    <div class="nav-left">
+    <a href="Main.html" class="logo">Don't Li$ten</a>
+    </div>
+    <div class="search-container">
+      <input type="text" id="search-bar" placeholder="Search...">
+    </div>
+
+
+    <div class="nav-right">
+      <a href="about.html">About</a>
+      <a href="Home.html">Home</a>
+    </div>
+  </div>
+  <div id="search-results" class="search-results"></div>
+
+
+  <!--Images-->
+  <div id="image-track" data-mouse-down-at="0" data-prev-percentage="0">
+    
+    <img class="image"
+      src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/7611aeeb-ff77-4f38-a9ee-852497be573e/d9w2fqy-ffbc6472-ec97-4520-a601-1e20fb3f9059.jpg/v1/fill/w_1192,h_670,q_70,strp/sia_ft__sean_paul___cheap_thrills___wallpaper_by_iatutorials_d9w2fqy-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTA4MCIsInBhdGgiOiJcL2ZcLzc2MTFhZWViLWZmNzctNGYzOC1hOWVlLTg1MjQ5N2JlNTczZVwvZDl3MmZxeS1mZmJjNjQ3Mi1lYzk3LTQ1MjAtYTYwMS0xZTIwZmIzZjkwNTkuanBnIiwid2lkdGgiOiI8PTE5MjAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.zkO7J6sZEK-B_NKMQbboQbuHsgVGZSs6GUl_8i8XSVs"
+      alt="Cheap Thrills" draggable="false" onclick="playSong('songs/Cheap Thrills (feat. Sean Paul).mp3', this)" />
+    <img class="image" src="https://i.ytimg.com/vi/6BdbcwMbd5Q/maxresdefault.jpg" alt="Señorita" draggable="false"
+      onclick="playSong('songs/Señorita.mp3', this)" />
+      <img class="image" src="https://i.ytimg.com/vi/OialXkHQ4Hw/maxresdefault.jpg"
+      alt="Shree Hanuman Chalisa" draggable="true" onclick="playSong('songs/shree-hanuman-chalisa.mp3', this)" />
+      <img class="image" src="https://i.ytimg.com/vi/UhXN7dxiQI4/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAD0lcTApL4bzwUVQbPwTUzijkFug" alt="Shape of You"
+      draggable="false" onclick="playSong('songs/Shape of You.mp3', this)" />     
+      <img class="image" src="https://i.ytimg.com/vi/Ps9tkSYvzL8/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAL10GMOtrKvtRVlqUO9SZ3mm_nRg" 
+      alt="Arcade"
+      draggable="false" onclick="playSong('songs/Arcade.mp3', this)" />
+      <img class="image" src="https://i.ytimg.com/vi/Mvaosumc4hU/maxresdefault.jpg" alt="Toxic"
+      draggable="false" onclick="playSong('songs/Toxic.mp3', this)" />
+      <img class="image" src="https://i.ytimg.com/vi/hN5iTqnoxfU/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDI8XUlKgAGzzRWnRuj7dgDk4vALA" alt="Daylight"
+      draggable="false" onclick="playSong('songs/Daylight.mp3', this)" />
+    <img class="image"
+      src="https://i.ytimg.com/vi/c1bb3C-J9G0/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGGUgXyhWMA8=&rs=AOn4CLDCuRZMAfN6GNYV190tydySBPpQTA"
+      alt="Bones" draggable="false" onclick="playSong('songs/Bones.mp3', this)" />
+    <img class="image" src="https://i.ytimg.com/vi/n_446eZFANI/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBf3yMwF_fZznHcAtQSaB6jQfGGoQ" alt="Runaway"
+      draggable="false" onclick="playSong('songs/Runaway.mp3',this)" />
+    <img class="image" src="https://i.ytimg.com/vi/mAxOhsrQRSs/maxresdefault.jpg" alt="Set Fire To The Rain"
+      draggable="false" onclick="playSong('songs/Set Fire to the Rain.mp3',this)" />
+  </div>
+  <div id="hidden-songs-container" style="display: none;">
+    <img class="song hidden-song" 
+      src="https://i.ytimg.com/vi/Bms39BUQBFw/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLD9LZqZM5iOGw0TRw-7MNbAJU25rw"
+      track-title="Shivers"
+      alt="Shivers"
+      data-artist="Ed Sheeran"
+      onclick="playSong('audio/Shivers.mp3', this)">
+
+      <img class="song hidden-song" 
+      src="https://i.scdn.co/image/ab67616d0000b27378025422931110f2592dad5c"
+      track-title="Perfect"
+      alt="Perfect"
+      data-artist="Ed Sheeran"
+      onclick="playSong('audio/7 Years.mp3', this)">
+
+      <img class="song hidden-song" 
+      src="https://i.pinimg.com/474x/fd/54/c8/fd54c85242e48d826e77c21f20623cc0.jpg"
+      track-title="7 Years"
+      alt="7 Years"
+      data-artist="Lukas Graham"
+      onclick="playSong('audio/7 Years.mp3', this)">
+ 
+ <img class="song hidden-song" 
+      src="https://i.pinimg.com/474x/21/99/22/2199223f26ebfd094dd06e7907a06655.jpg"
+      track-title="34+35"
+      alt="34+35"
+      data-artist="Ariana Grande"
+      onclick="playSong('audio/34+35.mp3', this)">
+ 
+ <img class="song hidden-song" 
+      src="https://i.pinimg.com/736x/e4/d1/26/e4d1267f08680defd5f02ad317f2520c.jpg"
+      track-title="A Bar Song"
+      alt="A Bar Song"
+      data-artist="Shaboozey"
+      onclick="playSong('audio/A Bar Song.mp3', this)">
+ 
+ <img class="song hidden-song" 
+      src="https://i.pinimg.com/474x/7c/ba/8c/7cba8c2c56df348815447930c2a96a98.jpg"
+      track-title="Achilles Come Down"
+      alt="Achilles Come Down"
+      data-artist="Gang of Youths"
+      onclick="playSong('audio/Achilles Come Down.mp3', this)">
+ 
+ <img class="song hidden-song" 
+      src="https://i.pinimg.com/474x/59/d7/6f/59d76f417faced81d0ff203ee292c36d.jpg"
+      track-title="Achilles Heel"
+      alt="Achilles Heel"
+      data-artist="Pedro the Lion"
+      onclick="playSong('audio/Achilles Heel.mp3', this)">
+ 
+ <img class="song hidden-song" 
+      src="https://i.pinimg.com/474x/cc/22/1b/cc221b48e00c4f664f9c555a39705016.jpg"
+      track-title="All The Stars"
+      alt="All The Stars"
+      data-artist="Kendrick Lamar & SZA"
+      onclick="playSong('audio/All The Stars.mp3', this)">
+ 
+ <img class="song hidden-song" 
+      src="https://i.pinimg.com/474x/94/1c/31/941c31c7a252cbc79a8de075e9317b25.jpg"
+      track-title="Anxiety"
+      alt="Anxiety"
+      data-artist="Julia Michaels ft. Selena Gomez"
+      onclick="playSong('audio/Anxiety.mp3', this)">
+ 
+ <img class="song hidden-song" 
+      src="https://i.pinimg.com/474x/41/60/ca/4160ca827b550c6770bfe266109e13bf.jpg"
+      track-title="Ashes"
+      alt="Ashes"
+      data-artist="Celine Dion"
+      onclick="playSong('audio/Ashes.mp3', this)">
+ 
+ <img class="song hidden-song" 
+      src="https://i.pinimg.com/474x/7d/1e/6e/7d1e6ef21f036ce0c90abd8912675a3f.jpg"
+      track-title="Bad Habits"
+      alt="Bad Habits"
+      data-artist="Ed Sheeran"
+      onclick="playSong('audio/Bad Habits.mp3', this)">
+ 
+ <img class="song hidden-song" 
+      src="https://i.pinimg.com/474x/2e/5d/fb/2e5dfb4f285b1b5525c95fc0e8d9325d.jpg"
+      track-title="Beautiful Things"
+      alt="Beautiful Things"
+      data-artist="Benson Boone"
+      onclick="playSong('audio/Beautiful Things.mp3', this)">
+
+      <img class="song hidden-song" 
+      src="https://i.pinimg.com/474x/b1/2f/15/b12f15ffc503dab37c0144e564b9f192.jpg"
+      track-title="Before You Go"
+      alt="Before You Go"
+      data-artist="Lewis Capaldi"
+      onclick="playSong('audio/Before You Go.mp3', this)">
+ 
+      <img class="song hidden-song" 
+      src="https://i.pinimg.com/474x/d1/b5/af/d1b5af40715e3b3478156d05f0ac3664.jpg"
+      track-title="Believer"
+      alt="Believer"
+      data-artist="Imagine Dragons"
+      onclick="playSong('audio/Believer.mp3', this)">
+ 
+ <img class="song hidden-song" 
+      src="https://i.pinimg.com/736x/af/69/1e/af691e600304d166a49409442ae494e0.jpg"
+      track-title="Big Dawgs"
+      alt="Big Dwags"
+      data-artist="Hanumankind"
+      onclick="playSong('audio/Big Dawgs.mp3', this)">
+ 
+ <img class="song hidden-song" 
+      src="https://i.pinimg.com/474x/65/2e/d2/652ed2fca04c02f2382a7ef129ad3714.jpg"
+      track-title="Brother"
+      alt="Brother"
+      data-artist="Kodaline"
+      onclick="playSong('audio/Brother.mp3', this)">
+ 
+ <img class="song hidden-song" 
+      src="https://i.pinimg.com/474x/b9/48/f0/b948f08f24825bdb4ce46341b035e30d.jpg"
+      track-title="Can I Be Him"
+      alt="Can I Be Him"
+      data-artist="James Arthur"
+      onclick="playSong('audio/Can I Be Him.mp3', this)">
+ 
+ <img class="song hidden-song" 
+      src="https://i.pinimg.com/474x/d4/91/9b/d4919b47f9d9e98bee9877d2d5acd262.jpg"
+      track-title="Carry You Home"
+      alt="Carry You Home"
+      data-artist="Alex Warren"
+      onclick="playSong('audio/Carry You Home.mp3', this)">
+ 
+ <img class="song hidden-song" 
+      src="https://i.pinimg.com/474x/2a/09/fa/2a09fa3a12d81afbfe73de8a27531414.jpg"
+      track-title="Castle on the Hill"
+      alt="Castle on the Hill"
+      data-artist="Ed Sheeran"
+      onclick="playSong('audio/Castle on the Hill.mp3', this)">
+ 
+ <img class="song hidden-song" 
+      src="https://i.pinimg.com/474x/85/9b/38/859b38a20687cf120332eb29812b82f5.jpg"
+      track-title="Celestial"
+      alt="Celestial"
+      data-artist="Ed Sheeran"
+      onclick="playSong('audio/Celestial.mp3', this)">
+ 
+ <img class="song hidden-song" 
+      src="https://i.pinimg.com/474x/9f/7f/37/9f7f3721579d8033fc11ffde5c5b28bf.jpg"
+      track-title="Cinderella's Dead"
+      alt="Cinderella's Dead"
+      data-artist="EMELINE"
+      onclick="playSong('audio/Cinderellas Dead.mp3', this)">
+ 
+ <img class="song hidden-song" 
+      src="https://i.pinimg.com/474x/c4/4a/90/c44a907bd02637cef177453719196204.jpg"
+      track-title="Counting Stars"
+      alt="Counting Stars"
+      data-artist="OneRepublic"
+      onclick="playSong('audio/Counting Stars.mp3', this)">
+ 
+ <img class="song hidden-song" 
+      src="https://i.pinimg.com/474x/ff/79/fc/ff79fcfcb1fc4c78671b58589c8215f4.jpg"
+      track-title="DARKSIDE"
+      alt="DARKSIDE"
+      data-artist="Alan Walker"
+      onclick="playSong('audio/DARKSIDE.mp3', this)">
+ 
+ <img class="song hidden-song" 
+      src="https://i.pinimg.com/474x/8b/cd/e1/8bcde13540b2f56f9d39fb44cdcdce1e.jpg"
+      track-title="Demons"
+      alt="Demons"
+      data-artist="Imagine Dragons"
+      onclick="playSong('audio/Demons.mp3', this)">
+ 
+ <img class="song hidden-song" 
+      src="https://i.pinimg.com/474x/9b/72/80/9b728003cfd537725880b10dd8ed1500.jpg"
+      track-title="Despacito"
+      alt="Despacito"
+      data-artist="Luis Fonsi ft. Daddy Yankee"
+      onclick="playSong('audio/Despacito.mp3', this)">
+ 
+ <img class="song hidden-song" 
+      src="https://i.pinimg.com/474x/f5/94/d5/f594d5ac57fbf047191a74ea3031a4e5.jpg"
+      track-title="Die With A Smile"
+      alt="Die With A Smile"
+      data-artist="Lady Gaga & Bruno Mars"
+      onclick="playSong('audio/Die With A Smile.mp3', this)">
+ 
+ <img class="song hidden-song" 
+      src="https://i.pinimg.com/474x/c2/48/49/c248497bba61e16edf9e97a6cb9d9e82.jpg"
+      track-title="Enemy"
+      alt="Enemy"
+      data-artist="Imagine Dragons & JID"
+      onclick="playSong('audio/Enemy.mp3', this)">
+ 
+ <img class="song hidden-song" 
+      src="https://i.pinimg.com/474x/7b/11/fe/7b11fe5c40cd4fd63fb765f10bb2a063.jpg"
+      track-title="Feeling Good"
+      alt="Feeling Good"
+      data-artist="Nina Simone"
+      onclick="playSong('audio/Feeling Good.mp3', this)">
+ 
+ <img class="song hidden-song" 
+      src="https://i.pinimg.com/474x/c3/2e/0e/c32e0e74a327cc1d81210b63949cb41f.jpg"
+      track-title="Gata Only"
+      alt="Gata Only"
+      data-artist="FloyyMenor & Cris MJ"
+      onclick="playSong('audio/Gata Only.mp3', this)">
+ 
+ <img class="song hidden-song" 
+      src="https://i.pinimg.com/474x/1d/60/ba/1d60baec2a668cca37eb05fca40f27e0.jpg"
+      track-title="Give Me A Kiss"
+      alt="Give Me A Kiss"
+      data-artist="Crash Adams"
+      onclick="playSong('audio/Give Me A Kiss.mp3', this)">
+ 
+ <img class="song hidden-song" 
+      src="https://i.pinimg.com/474x/9a/fb/36/9afb3663a9d5252b2c1686a880a2e3c0.jpg"
+      track-title="Golden Hour"
+      alt="Golden Hour"
+      data-artist="JVKE"
+      onclick="playSong('audio/Golden Hour.mp3', this)">
+ 
+ <img class="song hidden-song" 
+      src="https://i.pinimg.com/474x/e2/cd/00/e2cd00c9e5509d7c56f780885ee40494.jpg"
+      track-title="Gone, Gone, Gone"
+      alt="Gone, Gone, Gone"
+      data-artist="Phillip Phillips"
+      onclick="playSong('audio/Gone, Gone, Gone.mp3', this)">
+ 
+ <img class="song hidden-song" 
+      src="https://i.pinimg.com/474x/71/cf/8a/71cf8a505c9c45bd10f45af8032b509f.jpg"
+      track-title="I Ain't Worried"
+      ALT="I Ain't Worried"
+      data-artist="OneRepublic"
+      onclick="playSong('audio/I Aint Worried.mp3', this)">
+ 
+ <img class="song hidden-song" 
+      src="https://i.pinimg.com/474x/47/83/5e/47835edd34bb53e48b86190541c9fa7d.jpg"
+      track-title="I Lived"
+      alt="I Lived"
+      data-artist="OneRepublic"
+      onclick="playSong('audio/I Lived.mp3', this)">
+ 
+ <img class="song hidden-song" 
+      src="https://i.pinimg.com/474x/ac/4c/27/ac4c27c27da8031993f1da758c23a816.jpg"
+      track-title="I WANNA BE YOUR SLAVE"
+      alt="I WANNA BE YOUR SLAVE"
+      data-artist="Måneskin"
+      onclick="playSong('audio/I WANNA BE YOUR SLAVE.mp3', this)">
+ 
+ <img class="song hidden-song" 
+      src="https://i.pinimg.com/474x/a7/4d/8e/a74d8e6275799875a14c7f2e77605c6d.jpg"
+      track-title="Immigrant Song"
+      alt="Immigrant Song"
+      data-artist="Led Zeppelin"
+      onclick="playSong('audio/Immigrant Song.mp3', this)">
+ 
+ <img class="song hidden-song" 
+      src="https://i.pinimg.com/474x/4c/c6/af/4cc6af7009abf9d94a9bde29a99ec8d6.jpg"
+      track-title="iSpy"
+      alt="iSpy"
+      data-artist="KYLE ft. Lil Yachty"
+      onclick="playSong('audio/iSpy.mp3', this)">
+ 
+      <img class="song hidden-song" 
+      src="https://i.pinimg.com/474x/59/28/43/592843536fb96a47f7ae506d8e2db120.jpg"
+      track-title="Let Her Go"
+      alt="Let Her Go"
+      data-artist="Passenger"
+      onclick="playSong('audio/Let Her Go.mp3', this)">
+ 
+ <img class="song hidden-song" 
+      src="https://i.pinimg.com/474x/98/8e/be/988ebe0486d4c0cf8e3f4c306d1ae72f.jpg"
+      track-title="Love Is Gone"
+      alt="Love Is Gone"
+      data-artist="SLANDER ft. Dylan Matthew"
+      onclick="playSong('audio/Love Is Gone.mp3', this)">
+ 
+ <img class="song hidden-song" 
+      src="https://i.pinimg.com/474x/79/cf/c1/79cfc112d0aeafece1325c903c8d2ba5.jpg"
+      track-title="Love Story"
+      alt="Love Story"
+      data-artist="Taylor Swift"
+      onclick="playSong('audio/Love Story.mp3', this)">
+ 
+ <img class="song hidden-song" 
+      src="https://i.pinimg.com/474x/0b/78/65/0b7865168e7f019cf0cc07043dcf6ce5.jpg"
+      track-title="Me And My Broken Heart"
+      alt="Me And My Broken Heart"
+      data-artist="Rixton"
+      onclick="playSong('audio/Me And My Broken Heart.mp3', this)">
+ 
+ <img class="song hidden-song" 
+      src="https://i.pinimg.com/474x/8f/56/04/8f56043d4f777d4110b5c5db74029d2a.jpg"
+      track-title="Midnight Rain"
+      alt="Midnight Rain"
+      data-artist="Taylor Swift"
+      onclick="playSong('audio/Midnight Rain.mp3', this)">
+ 
+ <img class="song hidden-song" 
+      src="https://i.pinimg.com/474x/d5/18/3b/d5183bf1d0d7aa2f4209e57d518f014a.jpg"
+      track-title="Natural"
+      alt="Natural"
+      data-artist="Imagine Dragons"
+      onclick="playSong('audio/Natural.mp3', this)">
+ 
+ <img class="song hidden-song" 
+      src="https://i.pinimg.com/474x/a7/6e/e3/a76ee36c7ec0b7df440646a4178dace9.jpg"
+      track-title="One Kiss"
+      alt="One Kiss"
+      data-artist="Calvin Harris & Dua Lipa"
+      onclick="playSong('audio/One Kiss.mp3', this)">
+ 
+ <img class="song hidden-song" 
+      src="https://i.pinimg.com/736x/95/3c/09/953c0945de5b1a5b970f33b20d35dd76.jpg"
+      track-title="Photograph"
+      alt="Photograph"
+      data-artist="Ed Sheeran"
+      onclick="playSong('audio/Photograph.mp3', this)">
+ 
+ <img class="song hidden-song" 
+      src="https://i.pinimg.com/474x/73/47/c0/7347c04e736d50e2dae5a306acdc041b.jpg"
+      track-title="PUSH 2 START"
+      alt="PUSH 2 START"
+      data-artist="ARI ABDUL"
+      onclick="playSong('audio/PUSH 2 START.mp3', this)">
+ 
+ <img class="song hidden-song" 
+      src="https://i.pinimg.com/474x/e0/49/35/e049356f01d65badde60048045cb33c7.jpg"
+      track-title="Riptide"
+      alt="Riptide"
+      data-artist="Vance Joy"
+      onclick="playSong('audio/Riptide.mp3', this)">
+ 
+ <img class="song hidden-song" 
+      src="https://i.pinimg.com/474x/5c/c0/e7/5cc0e790aa78e4cefb044e412dfd3d63.jpg"
+      track-title="Shadow"
+      alt="Shadow"
+      data-artist="Macklemore"
+      onclick="playSong('audio/Shadow.mp3', this)">
+ 
+ <img class="song hidden-song" 
+      src="https://i.pinimg.com/474x/6b/b8/ff/6bb8ff2bdd3af0f29d1b400524656eb2.jpg"
+      track-title="Shake It Off"
+      alt="Shake It Off"
+      data-artist="Taylor Swift"
+      onclick="playSong('audio/Shake It Off.mp3', this)">
+ 
+ <img class="song hidden-song" 
+      src="https://i.pinimg.com/474x/4c/be/cf/4cbecfc7882779221fe5060150eaa733.jpg"
+      track-title="Shut Up and Dance"
+      alt="Shut Up and Dance"
+      data-artist="WALK THE MOON"
+      onclick="playSong('audio/Shut Up and Dance.mp3', this)">
+ 
+ <img class="song hidden-song" 
+      src="https://i.pinimg.com/474x/4c/be/cf/4cbecfc7882779221fe5060150eaa733.jpg"
+      track-title="Somebody That I Used To Know"
+      alt="Somebody That I Used To Know"
+      data-artist="Gotye ft. Kimbra"
+      onclick="playSong('audio/Somebody That I Used To Know.mp3', this)">
+ 
+ <img class="song hidden-song" 
+      src="https://i.pinimg.com/474x/8c/c7/29/8cc72912d025ebfeb4ba92939da52f9b.jpg"
+      track-title="Someone To You"
+      alt="Someone To You"
+      data-artist="BANNERS"
+      onclick="playSong('audio/Someone To You.mp3', this)">
+ 
+ <img class="song hidden-song" 
+      src="https://i.pinimg.com/474x/2b/92/a8/2b92a8cc7b41cf1dcb02846c9d53d31c.jpg"
+      track-title="Somewhere Only We Know"
+      alt="Somewhere Only We Know"
+      data-artist="Keane"
+      onclick="playSong('audio/Somewhere Only We Know.mp3', this)">
+ 
+ <img class="song hidden-song" 
+      src="https://i.pinimg.com/474x/ac/9e/54/ac9e5403cea2f9bc126a114f53042c40.jpg"
+      track-title="Sunroof"
+      alt="Sunroof"
+      data-artist="Nicky Youre, dazy"
+      onclick="playSong('audio/Sunroof.mp3', this)">
+ 
+ <img class="song hidden-song" 
+      src="https://i.pinimg.com/474x/22/4e/53/224e53c619596feb81933fb9b03815cb.jpg"
+      track-title="Tarantella"
+      alt="Tarantella"
+      data-artist="Traditional Italian"
+      onclick="playSong('audio/Tarantella.mp3', this)">
+ 
+ <img class="song hidden-song" 
+      src="https://i.pinimg.com/474x/a1/7e/4b/a17e4bf2a5a67a68862c4e282f09c6f4.jpg"
+      track-title="That's So True"
+      alt="That's So True"
+      data-artist="The Walters"
+      onclick="playSong('audio/Thats So True.mp3', this)">
+ 
+ <img class="song hidden-song" 
+      src="https://i.pinimg.com/474x/85/fe/18/85fe1843181c00f213f520d915b9ae5c.jpg"
+      track-title="The Lazy Song"
+      alt="The Lazy Song"
+      data-artist="Bruno Mars"
+      onclick="playSong('audio/The Lazy Song.mp3', this)">
+ 
+ <img class="song hidden-song" 
+      src="https://i.pinimg.com/474x/30/46/e9/3046e93a1e6a3c9d6494c38f3d827d48.jpg"
+      track-title="There's Nothing Holdin' Me Back"
+      alt="There's Nothing Holdin' Me Back"
+      data-artist="Shawn Mendes"
+      onclick="playSong('audio/Theres Nothing Holding Me Back.mp3', this)">
+ 
+ <img class="song hidden-song" 
+      src="https://i.pinimg.com/474x/3c/7f/7c/3c7f7c110a1c29a1af221ef7b9ac6af1.jpg"
+      track-title="This Is What Heartbreak Feels Like"
+      alt="This Is What Heartbreak Feels Like"
+      data-artist="JVKE"
+      onclick="playSong('audio/This Is What Heartbreak Feels Like.mp3', this)">
+ 
+ <img class="song hidden-song" 
+      src="https://i.pinimg.com/474x/33/bc/a0/33bca0a52e3baac9d854076284ae2e74.jpg"
+      track-title="Too Sweet"
+      alt="Too Sweet"
+      data-artist="Hozier"
+      onclick="playSong('audio/Too Sweet.mp3', this)">
+ 
+ <img class="song hidden-song" 
+      src="https://i.pinimg.com/474x/dd/4d/e1/dd4de12cf3d3cd215454d8c782977dc4.jpg"
+      track-title="Treat You Better"
+      alt="Treat You Better"
+      data-artist="Shawn Mendes"
+      onclick="playSong('audio/Treat You Better.mp3', this)">
+ 
+ <img class="song hidden-song" 
+      src="https://i.pinimg.com/474x/ea/82/51/ea82515b75d0c27fd743e44b5e039d7b.jpg"
+      track-title="Unholy"
+      alt="Unholy"
+      data-artist="Sam Smith & Kim Petras"
+      onclick="playSong('audio/Unholy.mp3', this)">
+ 
+ <img class="song hidden-song" 
+      src="https://i.pinimg.com/474x/ca/5e/76/ca5e76e30f8ea4b3e448718d4f6316fd.jpg"
+      track-title="Uptown Funk"
+      alt="Uptown Funk"
+      data-artist="Mark Ronson ft. Bruno Mars"
+      onclick="playSong('audio/Uptown Funk.mp3', this)">
+ 
+ <img class="song hidden-song" 
+      src="https://i.pinimg.com/474x/fb/47/b8/fb47b8dfa682c9d59b38ec446895860a.jpg"
+      track-title="Viva La Vida"
+      alt="Viva La Vida"
+      data-artist="Coldplay"
+      onclick="playSong('audio/Viva La Vida.mp3', this)">
+ 
+ <img class="song hidden-song" 
+      src="https://i.pinimg.com/474x/51/ac/3f/51ac3fd235ed37bd06b59c2105264dd8.jpg"
+      track-title="Waiting For Love"
+      alt="Waiting For Love"
+      data-artist="Avicii"
+      onclick="playSong('audio/Waiting For Love.mp3', this)">
+ 
+ <img class="song hidden-song" 
+      src="https://i.pinimg.com/474x/7e/f3/db/7ef3db2fa3d6ab187dc5fd8dfd7b22e0.jpg"
+      track-title="Welcome To Wonderland"
+      alt="Welcome To Wonderland"
+      data-artist="Anson Seabra"
+      onclick="playSong('audio/Welcome To Wonderland.mp3', this)">
+  </div>
+  
+
+  <!--Player-->
+  <div class="music-player">
+    <img src="" alt="Album Art" class="album-art" />
+    <div class="track-info">
+      <div class="track-title">Loading...</div>
+      <div class="track-artist">Unknown Artist</div>
+    </div>
+    <div class="player-controls">
+      <button class="prev-btn">⏮</button>
+      <button class="play-btn">▶</button>
+      <button class="next-btn">⏭</button>
+  </div>
+    <span class="current-time">0:00</span>
+    <input type="range" class="progress-bar" value="0" />
+    <span class="duration">0:00</span>
+    <span>🔊</span>
+    <input type="range" class="volume-bar" min="0" max="1" step="0.01" value="1" />
+    <audio id="background-music" preload="auto"></audio>
+  </div>
+
+  <!--Cursor-->
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+
+
+  
+
+
+
+
+  <!--Javascript-->
+  <script>
+    const audio = document.getElementById("background-music");
+const playBtn = document.querySelector(".play-btn");
+const progressBar = document.querySelector(".progress-bar");
+const playButton = document.querySelector(".play-btn");
+const currentTimeEl = document.querySelector(".current-time");
+const durationEl = document.querySelector(".duration");
+const volumeBar = document.querySelector(".volume-bar");
+const trackTitle = document.querySelector(".track-title");
+const trackArtist = document.querySelector(".track-artist");
+const albumArt = document.querySelector(".album-art");
+let currentSongIndex = -1;
+const songImages = Array.from(document.querySelectorAll("#image-track .image"));
+
+  
+
+
+
+playBtn.addEventListener("click", toggleMusic);
+audio.addEventListener("loadedmetadata", () => {
+durationEl.textContent = formatTime(audio.duration);
+});
+
+
+audio.addEventListener("timeupdate", () => {
+progressBar.value = (audio.currentTime / audio.duration) * 100;
+currentTimeEl.textContent = formatTime(audio.currentTime);
+});
+
+progressBar.addEventListener("input", () => {
+const seekTime = (progressBar.value / 100) * audio.duration;
+audio.currentTime = seekTime;
+});
+
+function formatTime(time) {
+const mins = Math.floor(time / 60);
+const secs = Math.floor(time % 60).toString().padStart(2, '0');
+return `${mins}:${secs}`;
+}
+
+    // Play a specific song when an image is clicked
+    function playSong(songFile, imgElement) {
+  const music = document.getElementById("background-music");
+  const musicPlayer = document.querySelector(".music-player");
+  const playButton = document.querySelector(".play-btn");
+
+  // Update current index
+  currentSongIndex = songImages.indexOf(imgElement);
+
+  // Set source, title, art
+  music.src = songFile;
+  albumArt.src = imgElement.src;
+  trackTitle.textContent = imgElement.alt;
+  trackArtist.textContent = "Unknown Artist";
+
+  // Show player and play song
+  musicPlayer.style.display = "flex";
+  music.play();
+  playButton.textContent = "⏸";
+  imgElement.crossOrigin = "anonymous";
+  updateGradientBackground(imgElement);
+}
+
+// Update the progress bar as the song plays
+function updateProgressBar() {
+const music = document.getElementById("background-music");
+const progress = document.getElementById("progress");
+
+const percentage = (music.currentTime / music.duration) * 100;
+progress.style.width = `${percentage}%`;
+}
+
+// Add event listener for when the song ends, so you can reset progress bar if needed
+document.getElementById("background-music").addEventListener('ended', () => {
+const progress = document.getElementById("progress");
+progress.style.width = '0%';
+});
+
+
+// Hide the player when the song ends
+document.getElementById("background-music").addEventListener('ended', () => {
+const musicPlayer = document.querySelector(".music-player");
+musicPlayer.style.display = "none";  // Hide the player when the song ends
+});
+
+// Toggle play/pause when the user clicks the play button
+function toggleMusic() {
+const music = document.getElementById("background-music");
+const playButton = document.querySelector(".play-btn");
+
+if (audio.paused) {
+    audio.play();
+    playBtn.textContent = "⏸"; 
+  } else {
+    audio.pause();
+    playBtn.textContent = "▶"; 
+  }
+}
+
+
+// Update the progress bar as the song plays
+function updateProgressBar() {
+const music = document.getElementById("background-music");
+const progress = document.getElementById("progress");
+const currentTimeDisplay = document.getElementById("current-time");
+
+const percentage = (music.currentTime / music.duration) * 100;
+progress.style.width = `${percentage}%`;
+
+currentTimeDisplay.textContent = formatTime(music.currentTime);
+}
+
+// Format time from seconds to minutes:seconds
+function formatTime(seconds) {
+const minutes = Math.floor(seconds / 60);
+const remainingSeconds = Math.floor(seconds % 60);
+return `${minutes}:${remainingSeconds < 10 ? '0' : ''}${remainingSeconds}`;
+}
+
+// Allow the user to seek within the song by clicking on the progress bar
+function seekSong(event) {
+const music = document.getElementById("background-music");
+const progressBar = document.querySelector(".progress-bar");
+const clickPosition = event.offsetX / progressBar.offsetWidth;
+const newTime = clickPosition * music.duration;
+music.currentTime = newTime;
+}
+
+volumeBar.addEventListener("input", function () {
+  if (!isNaN(volumeBar.value)) {
+    audio.volume = parseFloat(volumeBar.value);
+  }
+});
+
+
+document.querySelector(".prev-btn").addEventListener("click", () => {
+  if (currentSongIndex > 0) {
+    const prevImage = songImages[currentSongIndex - 1];
+    const songFile = getSongFileFromImage(prevImage);
+    playSong(songFile, prevImage);
+  }
+});
+
+document.querySelector(".next-btn").addEventListener("click", () => {
+  if (currentSongIndex < songImages.length - 1) {
+    const nextImage = songImages[currentSongIndex + 1];
+    const songFile = getSongFileFromImage(nextImage);
+    playSong(songFile, nextImage);
+  }
+});
+
+
+
+      document.addEventListener("DOMContentLoaded", () => {
+          const track = document.getElementById("image-track");
+          let isMouseDown = false;
+          let startX = 0;
+          let prevPercentage = 0;
+
+          const handleOnDown = (x) => {
+              isMouseDown = true;
+              startX = x;
+          };
+
+          const handleOnUp = () => {
+              isMouseDown = false;
+              track.dataset.prevPercentage = track.dataset.percentage || "0";
+          };
+
+          const handleOnMove = (x) => {
+              if (!isMouseDown) return;
+
+              const mouseDelta = startX - x;
+              const maxDelta = window.innerWidth / 2;
+
+              const percentage = (mouseDelta / maxDelta) * -100;
+              const nextPercentageUnconstrained = parseFloat(track.dataset.prevPercentage || "0") + percentage;
+              const nextPercentage = Math.max(Math.min(nextPercentageUnconstrained, 0), -100);
+
+              track.dataset.percentage = nextPercentage;
+              track.style.transform = `translate(${nextPercentage}%, -50%)`;
+
+              for (const image of track.getElementsByClassName("image")) {
+                  image.style.objectPosition = `${100 + nextPercentage}% center`;
+              }
+          };
+
+          // Mouse events
+          window.addEventListener("mousedown", e => handleOnDown(e.clientX));
+          window.addEventListener("mouseup", handleOnUp);
+          window.addEventListener("mousemove", e => handleOnMove(e.clientX));
+
+          // Touch events
+          window.addEventListener("touchstart", e => handleOnDown(e.touches[0].clientX));
+          window.addEventListener("touchend", handleOnUp);
+          window.addEventListener("touchmove", e => handleOnMove(e.touches[0].clientX));
+
+          // Scroll wheel movement
+          window.addEventListener("wheel", e => {
+              e.preventDefault(); // Prevent vertical scroll
+              
+              const delta = e.deltaY || e.deltaX; // most trackpads use deltaY
+              const scrollSpeed = 0.015; // adjust this for faster/slower scroll
+              
+              const prev = parseFloat(track.dataset.percentage || "0");
+              const nextPercentageUnconstrained = prev - delta * scrollSpeed;
+              const nextPercentage = Math.max(Math.min(nextPercentageUnconstrained, 0), -100);
+
+              track.dataset.percentage = nextPercentage;
+              track.dataset.prevPercentage = nextPercentage;
+
+              track.style.transform = `translate(${nextPercentage}%, -50%)`;
+
+              for (const image of track.getElementsByClassName("image")) {
+                  image.style.objectPosition = `${100 + nextPercentage}% center`;
+              }
+          }, { passive: false });
+
+          /* Custom cursor animation */
+          const coords = { x: 0, y: 0 };
+          const circles = document.querySelectorAll(".circle");
+
+          circles.forEach(circle => {
+              circle.x = 0;
+              circle.y = 0;
+          });
+
+          window.addEventListener("mousemove", function (e) {
+              coords.x = e.clientX;
+              coords.y = e.clientY;
+          });
+
+          function circleAnime() {
+              let x = coords.x;
+              let y = coords.y;
+
+              circles.forEach((circle, index) => {
+                  circle.style.left = x + "px";
+                  circle.style.top = y + "px";
+
+                  circle.style.scale = (circles.length - index) / circles.length;
+
+                  circle.x = x;
+                  circle.y = y;
+
+                  const nextCircle = circles[index + 1] || circles[0];
+                  x += (nextCircle.x - x) * 0.3;
+                  y += (nextCircle.y - y) * 0.3;
+              });
+
+              requestAnimationFrame(circleAnime);
+          }
+
+          circleAnime();
+
+          const links = document.querySelectorAll("a");
+
+          links.forEach(link => {
+              link.addEventListener("mouseenter", () => {
+                  circles.forEach(circle => circle.classList.add("hovered"));
+              });
+
+              link.addEventListener("mouseleave", () => {
+                  circles.forEach(circle => circle.classList.remove("hovered"));
+              });
+          });
+      });
+      // Function to change the background when an image is clicked
+function changeBackground(imageUrl) {
+// Select the background container
+const backgroundContainer = document.querySelector('.background-container');
+// Update the background image of the container
+backgroundContainer.style.backgroundImage = `url(${imageUrl})`;
+
+// Apply the blur effect (you can adjust the value for a stronger or weaker blur)
+backgroundContainer.style.filter = 'blur(10px)';
+}
+
+// Assuming you have images in a gallery, here’s how you can attach an event listener to each image
+const images = document.querySelectorAll('.image');  // All images on the page
+
+images.forEach(image => {
+image.addEventListener('click', (e) => {
+    const imageUrl = e.target.src;  // Get the clicked image's URL
+    changeBackground(imageUrl);  // Call the function to change the background
+});
+});
+function loadTrack(track) {
+const audio = document.getElementById("background-music");
+const albumArt = document.querySelector(".album-art");
+const trackTitle = document.querySelector(".track-title");
+const trackArtist = document.querySelector(".track-artist");
+
+audio.src = track.src;
+albumArt.src = track.albumArt;
+trackTitle.textContent = track.title;
+trackArtist.textContent = track.artist;
+}
+const colorThief = new ColorThief();
+
+function updateGradientBackground(imgElement) {
+// Make sure image is loaded before extracting color
+if (imgElement.complete) {
+    applyGradient(imgElement);
+} else {
+    imgElement.addEventListener('load', () => {
+        applyGradient(imgElement);
+    });
+}
+}
+
+function applyGradient(imgElement) {
+    // Create an off-screen image clone
+    const imgClone = new Image();
+    imgClone.crossOrigin = 'anonymous'; // Needed if you're using images from another domain
+    imgClone.src = imgElement.src;
+
+    // Wait for the cloned image to load
+    imgClone.onload = function () {
+        const dominantColor = colorThief.getColor(imgClone);
+        const palette = colorThief.getPalette(imgClone, 2);
+
+        const color1 = `rgb(${palette[0][0]}, ${palette[0][1]}, ${palette[0][2]})`;
+        const color2 = `rgb(${palette[1][0]}, ${palette[1][1]}, ${palette[1][2]})`;
+
+        const bg = document.querySelector('.background-gradient');
+        requestAnimationFrame(() => {
+            bg.style.background = `linear-gradient(to bottom right, ${color1}, ${color2})`;
+        });
+    };
+}
+
+const searchInput = document.getElementById('search-bar');
+    
+searchInput.addEventListener('input', () => {
+    const searchTerm = searchInput.value.toLowerCase();
+    songs.forEach(song => {
+        const title = song.getAttribute('track-title').toLowerCase();
+        const artist = song.getAttribute('data-artist').toLowerCase();
+
+        const matchesSearch = title.includes(searchTerm) || artist.includes(searchTerm);
+
+        if (matchesSearch) {
+            song.style.display = 'block';
+        } else {
+            // Hide both hidden and visible songs if no match
+            song.style.display = 'none';
+        }
+    });
+
+    // If search input is empty, show only the visible songs, hide the hidden ones again
+    if (searchTerm === '') {
+        songs.forEach(song => {
+            if (song.classList.contains('hidden-song')) {
+                song.style.display = 'none';
+            } else {
+                song.style.display = 'block';
+            }
+        });
+    }
+});
+
+document.getElementById("search-bar").addEventListener("input", function(event) {
+    const searchQuery = event.target.value.toLowerCase();
+    const songImages = Array.from(document.querySelectorAll("#image-track .image"));
+    const hiddenSongs = Array.from(document.querySelectorAll(".hidden-song"));
+
+    // Remove previous searched song results
+    document.querySelectorAll(".searched-song").forEach(img => img.remove());
+
+    // Clear the default visible songs if there's a search query
+    if (searchQuery.trim() !== "") {
+        songImages.forEach(img => {
+            if (!img.classList.contains("hidden-song")) {
+                img.style.display = "none";
+            }
+        });
+    } else {
+        // Restore default visible songs if search is cleared
+        songImages.forEach(img => {
+            if (!img.classList.contains("hidden-song")) {
+                img.style.display = "block";
+            }
+        });
+    }
+
+    // Loop through all hidden songs
+    hiddenSongs.forEach(song => {
+        const title = song.getAttribute("track-title").toLowerCase();
+        const artist = song.getAttribute("data-artist").toLowerCase();
+
+        if (title.includes(searchQuery) || artist.includes(searchQuery)) {
+            song.style.display = "block";
+            song.classList.add("searched-song"); // mark for easy removal later
+        } else {
+            song.style.display = "none";
+            song.classList.remove("searched-song");
+        }
+    });
+});
+
+
+function getSongFileFromImage(image) {
+  const onclickAttr = image.getAttribute("onclick");
+  const match = onclickAttr.match(/playSong\('(.+?)'/);
+  return match ? match[1] : "";
+}
+
+// Get the search bar element
+const searchBar = document.getElementById("search-bar");
+const hiddenSongs = document.querySelectorAll(".hidden-song");
+const searchResultsContainer = document.getElementById("search-results");
+
+searchBar.addEventListener("input", () => {
+  const query = searchBar.value.toLowerCase();
+  searchResultsContainer.innerHTML = ""; // Clear previous results
+
+  if (query === "") {
+    searchResultsContainer.style.display = "none";
+    return;
+  }
+
+  let found = false;
+
+  hiddenSongs.forEach(song => {
+    const title = song.getAttribute("track-title").toLowerCase();
+    const artist = song.getAttribute("data-artist").toLowerCase();
+
+    if (title.includes(query) || artist.includes(query)) {
+      const songClone = song.cloneNode(true);
+      songClone.classList.remove("hidden-song");
+      songClone.style.display = "inline-block"; // or "flex", etc.
+
+      searchResultsContainer.appendChild(songClone);
+      found = true;
+    }
+  });
+
+  searchResultsContainer.style.display = found ? "block" : "none";
+});
+
+// Listen for input changes in the search bar
+searchBar.addEventListener('input', function() {
+    const searchValue = searchBar.value.toLowerCase();
+    
+    // Get all the hidden songs (assuming they have the class 'hidden-song')
+    const hiddenSongs = document.querySelectorAll('.hidden-song .image');
+    
+    // If the search bar is not empty
+    if (searchValue) {
+        hiddenSongs.forEach(song => {
+            const title = song.getAttribute('track-title').toLowerCase();
+            const artist = song.getAttribute('data-artist').toLowerCase();
+            
+            // Check if the song matches the search term
+            if (title.includes(searchValue) || artist.includes(searchValue)) {
+                song.parentElement.classList.add('show');  // Show the song if it matches
+            } else {
+                song.parentElement.classList.remove('show');  // Hide the song if it doesn't match
+            }
+        });
+    } else {
+        // If the search bar is empty, hide all songs
+        hiddenSongs.forEach(song => {
+            song.parentElement.classList.remove('show');  // Remove the show class
+        });
+    }
+});
+
+  
+  </script>
+</body>
+</html>
