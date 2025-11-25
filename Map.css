@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: azure;
+    background-color: rgb(0, 0, 0);
+    height: 100vh;
+    width: 100vw;
+}
+
+svg {
+    width: 100vw;
+    height: 100vh;
+    display: block;
+}
+::-webkit-scrollbar{
+    width: 10px;
+    height: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background: #555;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #dcbfff;
+}
+
+.worldMap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: max-content;
+    height: max-content;
+    min-height: 30em;
+    background-color: #151218;
+    display: flex;
+    justify-content: center;
+}
+
+path {
+    fill: #443d4b;
+    stroke: #dcbfff;
+    transition: 100ms;
+}
+
+path:hover {
+    fill: #c99aff;
+}
+
+.sidePanel {
+    position: fixed;
+    background-color: #1d1a20;
+    padding: 2em;
+    top: 0;
+    left: -30em;
+    width: 100%;
+    max-width: 30em;
+    height: 100vh;
+    transition: 600ms cubic-bezier(0.77,0,0.18,1);
+    overflow: scroll;
+    z-index: 1000;
+}
+
+.sidePanel .container {
+    padding-block: 2em;
+    transition: 200ms ease-out;
+}
+
+.sidePanel.sidePanelOpen {
+    left: 0;
+}
+.hide {opacity: 0;}
+
+.closeButton {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 5em;
+    height: 5em;
+    border: none;
+    background-color: #443d4b;
+    color: #fff;
+    transition: 100ms;
+    cursor: pointer;
+}
+
+.closeButton i {
+    font-size: 2em; 
+}
+.closeButton:hover {
+    background-color: #c99aff;
+}
+
+.loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    pointer-events: none;
+    user-select: none;
+    transition: 200ms ;
+}
+
+.countryFlag {
+    width: 60%;
+    max-width: 20em;
+    height: auto;
+    object-fit: contain;
+}
+
+
+.sidePanel .container > ul {
+    margin-top: 2em;
+    list-style: none;
+}
+
+.sidePanel .container >ul >li {
+    margin-bottom: 2em;
+}
+
+.sidePanel li {
+    margin-bottom: 1em;
+    font-size: 1.2em;
+}
+
+.sidePanel ul ul {
+    margin-top: 1em;
+    font-size: 0.7em;
+    list-style: circle;
+    padding-left: 2em;
+}
+
+.sidePanel b {
+    color: #dcbfff;
+}
+
+.zoomControls {
+    position: fixed;
+    top: 1em;
+    right: 1em;
+}
+
+.zoomControls button {
+    display: block;
+    width: 1.5em;
+    height: 1.5em;
+    font-size: 2em;
+    background-color: #443d4b;
+    color: #fff;
+    border: 1px #dcbfff solid;
+    cursor: pointer;
+}
+
+.zoomControls button:hover {
+    background-color: #2e2a33;
+}
+
+button:disabled {
+    background-color: #1d1a20;
+    border: 1px #443d4b solid;
+    cursor: default;
+    color: #333;
+}
+
+.zoomOut {
+    margin-bottom: 10px;
+}
